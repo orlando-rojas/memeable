@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_28_181305) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,8 +37,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_181305) do
     t.string "type"
     t.string "url_source"
     t.integer "votes_count"
-    t.string "comments_count"
-    t.string "integer"
+    t.integer "comments_count"
     t.bigint "category_id", null: false
     t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -66,8 +66,19 @@ ActiveRecord::Schema.define(version: 2020_05_28_181305) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "meme_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meme_id"], name: "index_votes_on_meme_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
+  end
+
   add_foreign_key "comments", "memes"
   add_foreign_key "comments", "users"
   add_foreign_key "memes", "categories"
   add_foreign_key "memes", "users", column: "owner_id"
+  add_foreign_key "votes", "memes"
+  add_foreign_key "votes", "users"
 end
