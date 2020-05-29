@@ -13,23 +13,14 @@
  *= require_tree .
  *= require_self
  */
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 header {
   width: 80%;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 }
 
 .navbar {
-  font-family: "Lilita One";
   display: flex;
   justify-content: space-between;
   margin-left: 15px;
@@ -50,13 +41,18 @@ header {
   width: 35%;
 }
 
-.navbar .title {
+.navbar .navbar-title {
   font-size: 22px;
   width: 16%;
 }
 
+.navbar .navbar-title a {
+  color: #181f33;
+}
+
 .navbar .nav-items li,
-.navbar .nav-info-user p {
+.navbar .nav-info-user p,
+.navbar .nav-info-user a {
   list-style: none;
   font-size: 18px;
   line-height: 18px;

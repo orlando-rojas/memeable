@@ -1,7 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 html {
   font-size: 10px;
 }
@@ -10,7 +10,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lilita One', cursive;
+  font-family: "Lilita One", cursive;
 }
 
 a {
@@ -39,7 +39,7 @@ a {
 
 .meme-meme {
   width: 100%;
-  background: #EFF2F1;
+  background: #eff2f1;
   border: 1px solid black;
   text-align: center;
 }
@@ -58,7 +58,7 @@ a {
 .meme-created {
   width: 100%;
   height: 2.5rem;
-  background: #2F2F2F;
+  background: #2f2f2f;
   display: flex;
   align-items: center;
   padding: 0 0.7rem;
@@ -71,5 +71,18 @@ a {
 }
 
 .meme-username {
-  color: #78CFBA;
+  color: #78cfba;
+}
+
+//my account
+.container-user-account {
+  width: 77%;
+  margin: 0 auto;
+}
+.user-account-info {
+  font-size: 2.4rem;
+  margin-left: 0.8em;
+}
+.user-account-info-item {
+  margin-bottom: 1em;
 }
