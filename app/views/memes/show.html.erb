@@ -1,2 +1,36 @@
-<h1>Memes#show</h1>
-<p>Find me in app/views/memes/show.html.erb</p>
+<article class="memedetail">
+  <h1 class="memedetail-title">Meme Title</h1>
+  <img src=<%= @meme.url_source%> class="memedetail-img" />
+  <div class="memedetail-bottom">
+    <div class="memedetail-category">
+      <span class="memedetail-text">Category: </span>
+      <a href="#" class="memedetail-linkcategory"><%= @meme.category.name %></a>
+    </div>
+    <div class="memedetail-votes">
+      <span class="memedetail-text">Votes:</span>
+      <span class="memedetail-countvote"><%=@meme.votes_count %></span>
+      <% if user_signed_in? %>
+      <%= vote_link(@meme) %>
+      <%else %>
+        <span class="memedetail-logvote">Login to vote!</span>
+      <%end %>
+    </div>
+  </div>
+</article>
+<div class="comments">
+  <p class="comments-title">Comments:</p>
+  <%if user_signed_in? %>
+    <%= form_with model: @comment, url: meme_comments_path(@meme), method: :post, class: "comments-add" do |f| %>
+      <%= f.text_field :body, class: "comments-contain" %>
+      <%= f.submit "Create", class: "comments-button" %>
+    <%end %>
+  <%else %>
+    <span class="comments-login">Login to add a comment!</span>
+  <%end %>
+  <% @comments.each do |comment| %>
+    <div class="comments-body">
+     <p class="comments-username"><%=comment.user.username %></p>
+     <p class="comments-text"><%=comment.body %></p>
+    </div>
+  <%end %>
+</div>

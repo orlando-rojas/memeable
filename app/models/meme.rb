@@ -1,7 +1,9 @@
 class Meme < ApplicationRecord
+  has_many :comments
+  has_many :votes
   self.inheritance_column = :_ # Disable STI
   belongs_to :category
-  belongs_to :owner, class_name: 'User'
+  belongs_to :owner, class_name: "User"
 
   validates :title, presence: true, uniqueness: true
   validates :url_source, presence: true
