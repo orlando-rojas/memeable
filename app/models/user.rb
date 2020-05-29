@@ -5,9 +5,7 @@ class User < ApplicationRecord
        :recoverable, :rememberable, :validatable
 
   has_many :votes
-  has_many :voted_memes, through: :votes, source: :meme
-  has_many :comments
-  has_many :commented_memes, through: :comments, source: :meme
+  has_many :memes, foreign_key: 'owner_id'
   validates :username,  presence: true, uniqueness: true
   validates :email,  presence: true, uniqueness: true
   
