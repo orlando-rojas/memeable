@@ -1,17 +1,16 @@
 <div class="container">
   <div class="meme">
-    <% @memes_by_date.each do |date,memes| %>
-    <p class="meme-title"><%= format_date(date) %></p>
+    <h2 class="meme-title">Most popular memes</h2>
     <div class="meme-container">
-      <% memes.each do |meme| %>
+      <% @memes.each do |meme| %>
       <div class="meme-meme">
         <img src=<%= meme.url_source %> alt="" class="meme-img">
         <div class="meme-created">
           <p class="meme-by">created by: <span class="meme-username"><%=meme.owner.username %></span></p>
         </div>
       </div>
-      <%end %>
+      <%end%>
     </div>
-    <%end%>
   </div>
+
 </div>
