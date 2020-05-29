@@ -24,8 +24,6 @@ default: &default
 development:
   <<: *default
   database: memeable_development
-  username: postgres
-  password: 9jis2428ml
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -55,8 +53,6 @@ development:
 test:
   <<: *default
   database: memeable_test
-  username: postgres
-  password: 9jis2428ml
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -79,7 +75,5 @@ test:
 production:
   <<: *default
   database: memeable_production
-  #username: memeable
-  #password: <%= ENV['MEMEABLE_DATABASE_PASSWORD'] %>
-  username: postgres
-  password: 9jis2428ml
+  username: memeable
+  password: <%= ENV['MEMEABLE_DATABASE_PASSWORD'] %>
