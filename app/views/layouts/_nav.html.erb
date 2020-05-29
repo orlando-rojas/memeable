@@ -1,0 +1,29 @@
+<header>
+  <nav class="navbar">
+    <div class="title"><h1>memeable</h1></div>
+    <% if user_signed_in? %>
+      <ul class="nav-items">
+        <li><%= link_to "By Category" %></li>
+        <li><%= link_to "By Popularity" %></li>
+        <li><%= link_to "Search" %></li>
+        <li><%= link_to "Create Meme", new_meme %></li>
+      </ul>
+      <div class="nav-info-user">
+        <p class="welcome">Welcome, <%=current_user.username%></p>
+        <p><%= link_to "My Account" %></p>
+        <p><%=link_to "Log Out", destroy_user_session_path, method: "delete"%></p>
+      </div>
+    <% else %>
+      <ul class="nav-items">
+        <li><%= link_to "By Category" %></li>
+        <li><%= link_to "By Popularity" %></li>
+        <li><%= link_to "Search" %></li>
+      </ul>
+      <div class="nav-info-user">
+        <%=link_to "Login", new_user_session_path, class:"nav-info-user-login" %> 
+      </div>
+    <% end %>
+  </nav>
+  <div class="header-separador"></div>
+</header>
+
