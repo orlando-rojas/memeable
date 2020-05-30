@@ -1,21 +1,21 @@
 <header>
   <nav class="navbar">
-    <div class="navbar-title"><h1><%= link_to "memeable", root_path %></h1></div>
+    <div class="navbar-title"><%= link_to image_tag("memeable.png", :alt => "logo Memeable") , root_path %></div>
     <% if user_signed_in? %>
       <ul class="nav-items">
-        <li><%= link_to "By Category" %></li>
+        <li><%= link_to "By Category", category_path %></li>
         <li><%= link_to "By Popularity", popular_path %></li>
         <li><%= link_to "Search" %></li>
         <li><%= link_to "Create Meme" %></li>
       </ul>
       <div class="nav-info-user">
         <p>Welcome, <%=current_user.username%></p>
-        <p><%=link_to "My Account", account_show_path %></p>
+        <p><%=link_to "My Account", account_path %></p>
         <p><%=link_to "Log Out", destroy_user_session_path, method: "delete"%></p>
       </div>
     <% else %>
       <ul class="nav-items">
-        <li><%= link_to "By Category" %></li>
+        <li><%= link_to "By Category", category_path  %></li>
         <li><%= link_to "By Popularity", popular_path  %></li>
         <li><%= link_to "Search" %></li>
       </ul>

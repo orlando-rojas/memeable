@@ -39,15 +39,11 @@ header {
   display: flex;
   justify-content: space-between;
   width: 35%;
+  padding-right: 10px;
 }
 
 .navbar .navbar-title {
-  font-size: 22px;
-  width: 16%;
-}
-
-.navbar .navbar-title a {
-  color: #181f33;
+  width: 13%;
 }
 
 .navbar .nav-items li,

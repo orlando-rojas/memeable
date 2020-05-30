@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :memes, only: [:show, :new, :create, :edit, :update]
-  get 'account/show', to: 'account#show'
+  get '/account', to: 'account#show'
   get '/popular', to: 'popular#index'
   get '/category', to: 'category#index'
   root to: 'home#index'

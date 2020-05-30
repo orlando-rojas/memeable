@@ -74,8 +74,16 @@ a {
   color: #78cfba;
 }
 
+//notice and alert
+.notice,
+.alert {
+  font-size: 1.5rem;
+  color: #746e6e;
+}
 //my account
-.container-user-account {
+.container-user-account,
+.notice,
+.alert {
   width: 77%;
   margin: 0 auto;
 }
