@@ -36,7 +36,8 @@ ActiveRecord::Schema.define(version: 2020_05_30_004301) do
     t.string "type"
     t.string "url_source"
     t.integer "votes_count"
-    t.integer "comments_count"
+    t.string "comments_count"
+    t.string "integer"
     t.bigint "category_id", null: false
     t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
