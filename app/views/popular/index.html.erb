@@ -4,9 +4,11 @@
     <div class="meme-container">
       <% @memes.each do |meme| %>
       <div class="meme-meme">
+        <a href=<%=meme_path(meme) %>>
         <div class="meme-imgcontainer">
           <img src=<%= meme.url_source %> alt="" class="meme-img">
         </div>
+        </a>
         <div class="meme-created">
           <p class="meme-by">created by: <span class="meme-username"><%=meme.owner.username %></span></p>
         </div>

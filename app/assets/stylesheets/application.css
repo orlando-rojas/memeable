@@ -67,3 +67,18 @@ header {
 .header-separador {
   border-bottom: 1px solid #000000;
 }
+
+.hr-footer {
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+footer{
+  margin-top: 10px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

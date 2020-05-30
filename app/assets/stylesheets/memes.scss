@@ -1,3 +1,182 @@
 // Place all the styles related to the Memes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.memedetail {
+  width: 40%;
+  min-width: 50rem;
+  margin: 0 auto;
+}
+
+.memedetail-title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 1rem 0;
+  letter-spacing: 0.15rem;
+}
+
+.memedetail-img {
+  width: 100%;
+}
+
+.memedetail-bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.memedetail-category {
+  display: flex;
+  align-items: center;
+}
+
+.memedetail-text {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+.memedetail-linkcategory {
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 0.7rem;
+  border-radius: 1rem;
+  background: #181f33;
+  margin: 0 0.5rem;
+}
+
+.memedetail-votes {
+  display: flex;
+  align-items: center;
+}
+
+.memedetail-countvote {
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: #181f33;
+  margin: 0 0.5rem;
+}
+
+.memedetail-logvote {
+  display: inline-block;
+  width: 4.4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc7f9b;
+}
+
+.memedetail-vote {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  color: black;
+  font-size: 1.2rem;
+  background: #e5e5e5;
+  border: 1px solid #000000;
+}
+
+.memedetail-tagscontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.memedetail-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  background: #78cfba;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
+}
+
+.memedetail-formtag {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.memedetail-addtag {
+  width: 7.5rem;
+  height: 2.8rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.memedetail-addtag::placeholder {
+  color: #c4c4c4;
+}
+
+.memedetail-buttontag {
+  color: black;
+  font-family: Arial;
+  background: #e5e5e5;
+  border: 1px solid black;
+  height: 2.8rem;
+  padding: 0 0.7rem;
+  margin: 0 0.5rem;
+}
+
+.comments {
+  width: 40%;
+  min-width: 50rem;
+  margin: 4.8rem auto 0 auto;
+}
+
+.comments-title {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.comments-login {
+  font-size: 1.6rem;
+  color: #dc7f9b;
+}
+
+.comments-body {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.comments-username {
+  color: #78cfba;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.comments-text {
+  font-size: 1.6rem;
+}
+
+.comments-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.comments-contain {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.comments-button {
+  display: inline-block;
+  background: #e5e5e5;
+  border: 1px solid #000000;
+  padding: 0.6rem 2.1rem;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}

@@ -8,7 +8,7 @@ class Meme < ApplicationRecord
   has_many :comments
 
   validates :title, presence: true, uniqueness: true
-  validates :url_source, presence: true, format: { with: /\.(jpg|png|gif)\z/, message: "only allows jpg, png or gif " }
+  validates :url_source, presence: true
 
   before_create do
     self.votes_count = 0
