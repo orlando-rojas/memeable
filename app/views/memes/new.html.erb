@@ -1,27 +1,30 @@
-<h1>Create a meme!</h1>
+<div class="container">
+  <h1 class="title">Create a meme!</h1>
+  <div class="form">
+    <%= form_with(model: @meme) do |f| %>
 
-<%= form_with(model: @meme) do |f| %>
+    <div class="form-item">
+      <%= f.label :title, class: "form-label" %><br />
+      <%= f.text_field :title, class: "form-input" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :url_source, class: "form-label" %><br />
+      <%= f.text_field :url_source, class: "form-input" %>
+    </div>
+    <div class="form-item">
+      <%= f.label :type, class: "form-label" %><br />
+      <%= select_tag( "meme[type]", options_for_select([["image"],["gif"]])) %>
+    </div>
+    <div class="form-item">
+      <%= f.label :category, class: "form-label" %><br />
+      <!--<%= select_tag("meme[category]", options_for_select(Category.all.map{|x| x.name})) %>-->
+      <%=f.collection_select :category_id, Category.all, :id, :name%>
+    </div>
 
-<div>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-</div>
-<div>
-    <%= f.label :url_source %><br/>
-    <%= f.text_field :url_source %>
-</div>
-<div>
-    <%= f.label :type %><br/>
-    <%= select_tag( "meme[type]", options_for_select([["image"],["gif"]])) %>
-</div>
-<div>
-    <%= f.label :category %><br/>
-    <!--<%= select_tag("meme[category]", options_for_select(Category.all.map{|x| x.name})) %>-->
-    <%=f.collection_select :category_id, Category.all, :id,  :name %>
-</div>
+    <p>
+      <%= f.submit 'Create!', class: "form-send" %>
+    </p>
 
-<p>
-    <%= f.submit 'Create!' %>
-</p>
-
-<% end %>
+    <% end %>
+  </div>
+</div>

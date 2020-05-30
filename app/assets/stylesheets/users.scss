@@ -23,7 +23,7 @@
 }
 
 .form-input {
-  width: 100%;
+  width: 90%;
   height: 3.5rem;
   margin-top: 1.5rem;
   padding-left: 1rem;
@@ -44,6 +44,11 @@
   color: #78cfba;
 }
 
+.form-item select {
+  margin-top: 15px;
+  width: 30%;
+  height: 3rem;
+}
 //log in modificaciones
 .form-item-downcase {
   text-transform: lowercase;
@@ -53,4 +58,7 @@
 }
 .button-delete {
   margin-top: 0;
+}
+.form-label-remember {
+  font-size: 2em;
 }
