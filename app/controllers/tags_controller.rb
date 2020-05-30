@@ -11,7 +11,8 @@ class TagsController < ApplicationController
   private
   def create_tag
     meme = find_meme
-    return meme.tags << Tag.new(tag_params) if meme.owner == current_user
+    tags = meme.tags
+    return tags << Tag.new(tag_params) if meme.owner == current_user && tags.count < 5
     nil
   end
   def tag_params

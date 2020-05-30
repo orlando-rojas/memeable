@@ -21,7 +21,7 @@
     <% @tags.each do |tag| %>
       <span class="memedetail-tag"><%=tag.name%></span>
     <% end %>
-    <% if user_signed_in? && @meme.owner == current_user%>
+    <% if user_signed_in? && @meme.owner == current_user && @tags.count < 5 %>
       <%= form_with model: @tag, url: meme_tags_path(@meme), method: :post, class: "memedetail-formtag" do |f|%>
           <%= f.text_field :name, class: "memedetail-addtag" %>
           <%= f.submit "Add tag", class: "memedetail-buttontag"%>
@@ -45,4 +45,5 @@
      <p class="comments-text"><%=comment.body %></p>
     </div>
   <%end %>
+  
 </div>
