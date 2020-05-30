@@ -1,5 +1,5 @@
 <article class="memedetail">
-  <h1 class="memedetail-title">Meme Title</h1>
+  <h1 class="memedetail-title"><%= @meme.title%></h1>
   <img src=<%= @meme.url_source%> class="memedetail-img" />
   <div class="memedetail-bottom">
     <div class="memedetail-category">
@@ -15,6 +15,18 @@
         <span class="memedetail-logvote">Login to vote!</span>
       <%end %>
     </div>
+  </div>
+  <div class="memedetail-tagscontainer">
+    <span class="memedetail-text">Tags:</span>
+    <% @tags.each do |tag| %>
+      <span class="memedetail-tag"><%=tag.name%></span>
+    <% end %>
+    <% if user_signed_in? && @meme.owner == current_user%>
+      <%= form_with model: @tag, url: meme_tags_path(@meme), method: :post, class: "memedetail-formtag" do |f|%>
+          <%= f.text_field :name, class: "memedetail-addtag" %>
+          <%= f.submit "Add tag", class: "memedetail-buttontag"%>
+      <%end %>
+    <%end %>
   </div>
 </article>
 <div class="comments">

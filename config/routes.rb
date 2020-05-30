@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :memes, only: [:show, :new, :create, :edit, :update] do
     resources :votes, only: [:create,:destroy]
     resources :comments, only: [:create]
+    resources :tags, only: [:create]
   end
   get '/popular', to: 'popular#index'
   root to: 'home#index'

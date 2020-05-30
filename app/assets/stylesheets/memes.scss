@@ -11,6 +11,7 @@
   font-size: 3.2rem;
   text-align: center;
   margin: 1rem 0;
+  letter-spacing: 0.15rem;
 }
 
 .memedetail-img {
@@ -22,6 +23,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .memedetail-category {
@@ -46,7 +48,6 @@
 .memedetail-votes {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
 }
 
 .memedetail-countvote {
@@ -73,6 +74,54 @@
   font-size: 1.2rem;
   background: #e5e5e5;
   border: 1px solid #000000;
+}
+
+.memedetail-tagscontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.memedetail-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  background: #78cfba;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
+}
+
+.memedetail-formtag {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.memedetail-addtag {
+  width: 7.5rem;
+  height: 2.8rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.memedetail-addtag::placeholder {
+  color: #c4c4c4;
+}
+
+.memedetail-buttontag {
+  color: black;
+  font-family: Arial;
+  background: #e5e5e5;
+  border: 1px solid black;
+  height: 2.8rem;
+  padding: 0 0.7rem;
+  margin: 0 0.5rem;
 }
 
 .comments {
