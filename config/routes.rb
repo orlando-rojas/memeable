@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get '/popular', to: 'popular#index'
   get '/category', to: 'category#index'
   root to: 'home#index'
+  resources :memes, only: [:show, :new, :create] do
+    resources :comments, only: [:create, :show]
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
