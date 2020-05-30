@@ -1,0 +1,27 @@
+<h1>Create a meme!</h1>
+
+<%= form_with(model: @meme) do |f| %>
+
+<div>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+</div>
+<div>
+    <%= f.label :url_source %><br/>
+    <%= f.text_field :url_source %>
+</div>
+<div>
+    <%= f.label :type %><br/>
+    <%= select_tag( "meme[type]", options_for_select([["image"],["gif"]])) %>
+</div>
+<div>
+    <%= f.label :category %><br/>
+    <!--<%= select_tag("meme[category]", options_for_select(Category.all.map{|x| x.name})) %>-->
+    <%=f.collection_select :category_id, Category.all, :id,  :name %>
+</div>
+
+<p>
+    <%= f.submit 'Create!' %>
+</p>
+
+<% end %>

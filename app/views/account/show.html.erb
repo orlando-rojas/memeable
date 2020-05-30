@@ -1,0 +1,9 @@
+<div class="container-user-account">
+  <h1 class="title">My Account</h1>
+  <div class="user-account-info">
+    <p class="user-account-info-item">username: <%= @user.username%></p>
+    <p class="user-account-info-item">email: <%= @user.email%></p>
+    <p class="user-account-info-item"># of memes: <%= @user.memes_count%></p>
+    <%= link_to "Edit", edit_user_registration_path, class: "form-send"%>
+  </div>
+</div>

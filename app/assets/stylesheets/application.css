@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+header {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.navbar .nav-items {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.navbar .nav-info-user {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  padding-right: 10px;
+}
+
+.navbar .navbar-title {
+  width: 13%;
+}
+
+.navbar .nav-items li,
+.navbar .nav-info-user p,
+.navbar .nav-info-user a {
+  list-style: none;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.navbar .nav-items a,
+.navbar .nav-info-user a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar .nav-info-user .nav-info-user-login {
+  width: 100%;
+  text-align: right;
+}
+.header-separador {
+  border-bottom: 1px solid #000000;
+}
+
+.hr-footer {
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+footer{
+  margin-top: 10px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
