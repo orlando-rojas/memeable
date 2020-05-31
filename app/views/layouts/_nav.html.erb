@@ -3,7 +3,7 @@
     <div class="navbar-title"><%= link_to image_tag("memeable.png", :alt => "logo Memeable") , root_path %></div>
     <% if user_signed_in? %>
       <ul class="nav-items">
-        <li><%= link_to "By Category", category_path %></li>
+        <li><%= link_to "By Category", categories_path %></li>
         <li><%= link_to "By Popularity", popular_path %></li>
         <li><%= link_to "Search" %></li>
         <li><%= link_to "Create Meme",  new_meme_path %></li>
@@ -15,7 +15,7 @@
       </div>
     <% else %>
       <ul class="nav-items">
-        <li><%= link_to "By Category", category_path  %></li>
+        <li><%= link_to "By Category", categories_path  %></li>
         <li><%= link_to "By Popularity", popular_path  %></li>
         <li><%= link_to "Search" %></li>
       </ul>

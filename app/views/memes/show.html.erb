@@ -12,7 +12,7 @@
       <% if user_signed_in? %>
       <%= vote_link(@meme) %>
       <%else %>
-        <span class="memedetail-logvote">Login to vote!</span>
+        <%= link_to "Login to vote!", new_user_session_path, class: "memedetail-logvote" %>
       <%end %>
     </div>
   </div>
@@ -37,7 +37,7 @@
       <%= f.submit "Create", class: "comments-button" %>
     <%end %>
   <%else %>
-    <span class="comments-login">Login to add a comment!</span>
+    <%= link_to  "Login to add a comment!", new_user_session_path, class: "comments-login"%>
   <%end %>
   <% @comments.each do |comment| %>
     <div class="comments-body">

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :tags, only: [:create]
   end
   get '/popular', to: 'popular#index'
-  get '/category', to: 'category#index'
+  get '/categories', to: 'category#index'
   root to: 'home#index'
   resources :memes, only: [:show, :new, :create] do
     resources :comments, only: [:create, :show]

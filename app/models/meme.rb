@@ -8,7 +8,7 @@ class Meme < ApplicationRecord
   has_many :comments
 
   validates :title, presence: true, uniqueness: true
-  validates :url_source, presence: true
+  validates :url_source, presence: true, url_img: true
 
   before_create do
     self.votes_count = 0
