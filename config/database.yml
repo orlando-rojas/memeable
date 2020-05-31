@@ -79,7 +79,7 @@ test:
 production:
   <<: *default
   database: memeable_production
+
   username: memeable
   password: <%= ENV['MEMEABLE_DATABASE_PASSWORD'] %>
-  #username: postgres
-  #password: 9jis2428ml
+
